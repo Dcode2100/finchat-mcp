@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Make dark theme the default by removing the .dark class requirement */
+    --background: 200 15% 13%;
+    --foreground: 0 0% 100%;
+
+    --card: 200 14% 14%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 200 14% 14%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 151 100% 33%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 200 14% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 200 14% 20%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 151 100% 33%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 14% 20%;
+    --input: 200 14% 20%;
+    --ring: 151 100% 33%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 200 15% 13%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 151 100% 33%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 200 14% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 200 14% 20%;
+    --sidebar-ring: 151 100% 33%;
+  }
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[#111B21] font-sans text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-[1.02];
+  }
+  
+  .hover-shadow {
+    @apply transition-shadow duration-200 hover:shadow-md;
+  }
+
+  /* Add WhatsApp-like utility classes */
+  .chat-bubble {
+    @apply rounded-lg p-3 max-w-[70%];
+  }
+
+  .chat-bubble-sent {
+    @apply bg-[#005C4B] text-white ml-auto;
+  }
+
+  .chat-bubble-received {
+    @apply bg-[#202C33] text-white;
+  }
+}
